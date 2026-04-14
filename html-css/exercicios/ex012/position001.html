@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Position 001 - Modal</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        /* DESAFIO: Use position absolute/relative para criar um modal centralizado */
+        .container {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .modal {
+            /* Altere aqui: torne absolute, centralize na tela */
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            width: 400px;
+            max-width: 90%;
+        }
+        .modal.active {
+            display: block;
+        }
+        .backdrop {
+            /* Crie um fundo escuro fixed que cobre toda a tela */
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .backdrop.active {
+            display: block;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio Position 001</h1>
+    <p><strong>Objetivo:</strong> Crie um modal que aparece centralizado na tela quando clicar no botão.</p>
+    <p><strong>Instruções:</strong></p>
+    <ul>
+        <li>Use position: relative no container pai</li>
+        <li>Use position: absolute/fixed no modal, centralizado</li>
+        <li>Crie backdrop fixed que cobre a tela</li>
+        <li>Adicione classes .active para mostrar/esconder (adicione JS simples se quiser)</li>
+    </ul>
+    
+    <div class="backdrop" onclick="closeModal()"></div>
+    <div class="container">
+        <button onclick="openModal()">Abrir Modal</button>
+        <div class="modal" id="modal">
+            <h2>Modal de Exemplo</h2>
+            <p>Este é um modal centralizado! Feche clicando fora ou no botão.</p>
+            <button onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.querySelector('.modal').classList.add('active');
+            document.querySelector('.backdrop').classList.add('active');
+        }
+        function closeModal() {
+            document.querySelector('.modal').classList.remove('active');
+            document.querySelector('.backdrop').classList.remove('active');
+        }
+    </script>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</body>
+</html>

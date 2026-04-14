@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkblue;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        a::after {
+            content: " (link)";
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalisando Links</h1>
+    <ul>
+        <li><a href="https://github.com" target="_blank">Github</a></li>
+        <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
+        <li><a href="https://google.com" target="_blank">Google</a></li>
+    </ul>
+</body>
+</html>

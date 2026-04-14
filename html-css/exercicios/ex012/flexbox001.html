@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Flexbox 001 - Barra de Navegação</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        /* DESAFIO: Use Flexbox para criar uma barra de navegação horizontal */
+        /* Dicas: display: flex; justify-content; align-items; */
+        .navbar {
+            background-color: #333;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li {
+            /* Altere aqui para fazer os itens ficarem lado a lado */
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #555;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio Flexbox 001</h1>
+    <p><strong>Objetivo:</strong> Transforme a lista em uma barra de navegação horizontal responsiva usando Flexbox.</p>
+    <p><strong>Instruções:</strong></p>
+    <ul>
+        <li>Faça os itens da lista ficarem lado a lado (horizontal)</li>
+        <li>Centralize verticalmente o texto nos links</li>
+        <li>Deixe espaço uniforme entre os itens</li>
+    </ul>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit voluptates repudiandae repellendus, dolore dolores exercitationem a perspiciatis vitae facilis.</p>
+</body>
+</html>
